@@ -53,6 +53,10 @@ function sortOpenAPIFields(field1, field2) {
 	}
 }
 
+export function applyOverlay(definition, overlay) {
+        return applyOverlayToOpenAPI(definition, overlay);
+}
+
 export function overlayFiles(openapiFile, overlayFile) {
 	// Parse the "input" OpenAPI document
 	const specraw = fs.readFileSync(openapiFile, 'utf8');
